@@ -1,7 +1,4 @@
-$mainColour: green;
-$maxWidth: 1000;
-
-
+@import 'variables';
 
 *{
   box-sizing: border-box;
@@ -9,15 +6,7 @@ $maxWidth: 1000;
   margin: 0;
 }
 
-$columns: 12;
-$columnWidth: 100% / $columns;
 
-@for $i from 1 through $columns{
-  .col#{$i}{
-    width: $columnWidth * $i;
-
-  }
-}
 
 #headerNav{
   background-color: $mainColour;
@@ -39,11 +28,7 @@ $columnWidth: 100% / $columns;
     }
 }
 
-@mixin colourLayout{
-  color: red;
-  background-color: blue;
-  border: 10px solid green;
-}
+
 
 h1{
   @include colourLayout;
